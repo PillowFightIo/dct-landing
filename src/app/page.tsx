@@ -3,29 +3,34 @@ import styles from "./page.module.css";
 import logotext from '../../public/dct-text.png';
 import gridtile from '../../public/hextile.png';
 import dragonmask from '../../public/dragon-mask-alpha.png';
+import maincave from '../../public/main_cave.png';
 
 export default function Home() {
   return (
     <main className={styles.main} style={{
       "--gridtile-url": `url(${gridtile.src})`,
-      "--dragonmask-url": `url(${dragonmask.src})`
+      "--dragonmask-url": `url(${dragonmask.src})`,
+      "--maincave-url": `url(${maincave.src})`,
     } as React.CSSProperties}>
       <div className={styles.hero}>
-        <Image 
-          src={logotext}
-          alt="Dragon Care Tarot" 
-          height={logotext.height} 
-          width={logotext.width} 
-          style={{
-            position:'relative',
-            zIndex: 1,
-            visibility:'visible',
-            maxHeight: '500px',
-            maxWidth: '95vw',
-            width: 'auto',
-            height: 'auto'
-          }}
-        />
+        <div className={styles.dragonlogo}>
+          <Image 
+            src={logotext}
+            alt="Dragon Care Tarot" 
+            height={logotext.height} 
+            width={logotext.width} 
+            style={{
+              position:'relative',
+              zIndex: 1,
+              visibility:'visible',
+              maxHeight: '500px',
+              maxWidth: '95vw',
+              width: 'auto',
+              height: 'auto'
+            }}
+          />
+
+        </div>
       </div>
       <div className={styles.grid}>
         <a

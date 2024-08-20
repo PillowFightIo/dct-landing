@@ -1,9 +1,11 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  /*
+  justify-content: space-between;
   min-height: 100vh;
+  */
 }
 
 
@@ -21,13 +23,21 @@
 .hero {
   position: relative;
   min-height: 400px;
-  max-width: 95vw;
-  margin-top: 2em;
+  padding: 2em 0;
+  width: 100vw;
+
+  background-size: cover;
+  background-image: var(--maincave-url);
 }
-.hero::before {
+.dragonlogo {
+  text-align: center;
+  max-width: 95vw;
+  position: relative;
+}
+.dragonlogo::before {
   position: absolute;
   content: '';
-  z-index: -1;
+  z-index: 0;
   left: 0; right: 0;
   top: 0; bottom: 0;
   background-image: 
@@ -46,6 +56,7 @@
   mask-repeat: no-repeat;
   mask-position: top;
 }
+
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
@@ -101,6 +112,10 @@
 }
 
 @media (prefers-reduced-motion) {
+  .dragonlogo::before {
+    animation: none;
+    
+  }
   .card:hover span {
     transform: none;
   }
@@ -110,6 +125,10 @@
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
+  }
+
+  .hero {
+    min-height: 200px;
   }
 
   .grid {
@@ -131,6 +150,12 @@
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+
+  .hero {
+    min-height: 300px;
+  }
+
+
   .grid {
     grid-template-columns: repeat(2, 50%);
   }
