@@ -4,10 +4,18 @@ import logotext from '../../public/dct-text.png';
 import gridtile from '../../public/hextile.png';
 import dragonmask from '../../public/dragon-mask-alpha.png';
 import maincave from '../../public/main_cave.png';
+import tenacious_explaining from '../../public/tenacious_explaining.gif';
+import trimmed_loop from '../../public/trimmed-loop.gif';
+import { PT_Mono } from "next/font/google";
+
+const ptmono = PT_Mono({ 
+  weight: ['400'],
+  subsets: ["latin"]
+});
 
 export default function Home() {
   return (
-    <main className={styles.main} style={{
+    <main className={`${styles.main} ${ptmono.className}`} style={{
       "--gridtile-url": `url(${gridtile.src})`,
       "--dragonmask-url": `url(${dragonmask.src})`,
       "--maincave-url": `url(${maincave.src})`,
@@ -32,56 +40,28 @@ export default function Home() {
 
         </div>
       </div>
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={styles.content}>
+        <h2>Dragon Care Tarot is a virtual pet simulator for dragon-lovers of all ages.<br/><br/>Pet, feed, and polish hand-animated dragons, fly over mysterious islands, and learn your future.</h2>
+        <div className={styles.grid}>
+          <div
+            className={styles.card}
+          >
+            <Image
+              src={trimmed_loop}
+              alt="A dragon in flight, looping majestically"
+              fill />
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          <div
+            className={styles.card}
+          >
+            <Image
+              src={tenacious_explaining}
+              alt="The mysterious human-form moth daemon Tenacious, who is happily smiling at you"
+              fill />
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        </div>
       </div>
     </main>
   );
