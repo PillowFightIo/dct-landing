@@ -21,6 +21,7 @@
 .hero {
   position: relative;
   min-height: 400px;
+  max-width: 95vw;
   margin-top: 2em;
 }
 .hero::before {
@@ -41,13 +42,9 @@
   animation: tilescroll 120s linear infinite;
 
   mask-image: var(--dragonmask-url);
-  mask-size: auto 100%;
+  mask-size: contain;
   mask-repeat: no-repeat;
-  mask-position: center;
-}
-.hero img {
-  position: relative;
-  z-index: 1;
+  mask-position: top;
 }
 .code {
   font-weight: 700;

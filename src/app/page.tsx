@@ -17,9 +17,13 @@ export default function Home() {
           height={logotext.height} 
           width={logotext.width} 
           style={{
+            position:'relative',
+            zIndex: 1,
             visibility:'visible',
             maxHeight: '500px',
-            width: 'auto'
+            maxWidth: '95vw',
+            width: 'auto',
+            height: 'auto'
           }}
         />
       </div>
