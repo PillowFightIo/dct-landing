@@ -20,16 +20,17 @@
 
 .hero {
   position: relative;
-  width: 100%;
-  min-height: 500px;
+  min-height: 400px;
+  margin-top: 2em;
 }
-.dragon {
-  position: relative;
+.hero::before {
+  position: absolute;
+  content: '';
   z-index: -1;
-  width: 100%;
-  min-height: 500px;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
   background-image: 
-    url('/hextile.png'), 
+    var(--gridtile-url), 
     linear-gradient(180deg, rgba(244,21,162,1) 0%, rgba(242,132,234,1) 100%);
   background-size: 
     60px, 
@@ -39,10 +40,14 @@
     repeat-x;
   animation: tilescroll 120s linear infinite;
 
-  mask-image: url('/mask.png');
+  mask-image: var(--dragonmask-url);
   mask-size: auto 100%;
   mask-repeat: no-repeat;
   mask-position: center;
+}
+.hero img {
+  position: relative;
+  z-index: 1;
 }
 .code {
   font-weight: 700;

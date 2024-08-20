@@ -1,12 +1,27 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import logotext from '../../public/dct-text.png';
+import gridtile from '../../public/hextile.png';
+import dragonmask from '../../public/dragon-mask-alpha.png';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} style={{
+      "--gridtile-url": `url(${gridtile.src})`,
+      "--dragonmask-url": `url(${dragonmask.src})`
+    } as React.CSSProperties}>
       <div className={styles.hero}>
-        <div className={styles.dragon}></div>
-        {/*<Image src="/dct-text-crop@0.5x.png" alt="Dragon Care Tarot" fill={true}/>*/}
+        <Image 
+          src={logotext}
+          alt="Dragon Care Tarot" 
+          height={logotext.height} 
+          width={logotext.width} 
+          style={{
+            visibility:'visible',
+            maxHeight: '500px',
+            width: 'auto'
+          }}
+        />
       </div>
       <div className={styles.grid}>
         <a
