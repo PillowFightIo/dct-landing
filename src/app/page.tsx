@@ -5,7 +5,9 @@ import gridtile from '../../public/hextile.png';
 import dragonmask from '../../public/dragon-mask-alpha.png';
 import maincave from '../../public/main_cave.png';
 import tenacious_explaining from '../../public/tenacious_explaining.gif';
-import trimmed_loop from '../../public/trimmed-loop.gif';
+import tarotcards from '../../public/tarot_cards.gif';
+import dragonloop from '../../public/dragon-loop-wide.gif';
+import dragonsayshi from '../../public/dragon_says_hi.gif';
 import { PT_Mono } from "next/font/google";
 
 const ptmono = PT_Mono({ 
@@ -47,7 +49,17 @@ export default function Home() {
             className={styles.card}
           >
             <Image
-              src={trimmed_loop}
+              src={tarotcards}
+              unoptimized
+              alt="A three card tarot spread"
+              fill />
+          </div>
+          <div
+            className={styles.card}
+          >
+            <Image
+              src={dragonloop}
+              unoptimized
               alt="A dragon in flight, looping majestically"
               fill />
           </div>
@@ -56,8 +68,9 @@ export default function Home() {
             className={styles.card}
           >
             <Image
-              src={tenacious_explaining}
-              alt="The mysterious human-form moth daemon Tenacious, who is happily smiling at you"
+              src={dragonsayshi}
+              unoptimized
+              alt="An adult dragon says hello"
               fill />
           </div>
 

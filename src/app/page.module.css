@@ -62,7 +62,7 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  max-width: 1024px;
+  max-width: var(--max-width);
   text-align: center;
 
   box-sizing: border-box;
@@ -76,7 +76,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(33%, auto));
+  grid-template-columns: repeat(1, minmax(33%, auto));
   max-width: 100%;
   width: var(--max-width);
 }
@@ -84,6 +84,7 @@
 .card {
   position: relative;
   min-height: 300px;
+  margin-bottom: 1rem;
 }
 
 .card img {
