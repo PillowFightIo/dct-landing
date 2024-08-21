@@ -4,7 +4,6 @@ import logotext from '../../public/dct-text.png';
 import gridtile from '../../public/hextile.png';
 import dragonmask from '../../public/dragon-mask-alpha.png';
 import maincave from '../../public/main_cave.png';
-import tenacious_explaining from '../../public/tenacious_explaining.gif';
 import tarotcards from '../../public/tarot_cards.gif';
 import dragonloop from '../../public/dragon-loop-wide.gif';
 import dragonsayshi from '../../public/dragon_says_hi.gif';
