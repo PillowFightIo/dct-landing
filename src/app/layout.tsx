@@ -9,24 +9,24 @@ export const metadata: Metadata = {
   description: "A cozy virtual pet game with divination. Brought to you by Pillow Fight.",
   themeColor: '#012b41',
   icons: {
+    icon: [
+      {
+        url: '/favicon-32x32.png',
+        type: 'image/png',
+        rel: 'icon',
+        sizes: '32x32',
+      },
+      {
+        url: '/favicon-16x16.png',
+        type: 'image/png',
+        rel: 'icon',
+        sizes: '16x16',
+      },
+    ],
     apple: {
       sizes: '180x180',
       url: '/apple-touch-icon.png'
     },
-    other: [
-    {
-      url: '/favicon-32x32.png',
-      type: 'image/png',
-      rel: 'icon',
-      sizes: '32x32',
-    },
-    {
-      url: '/favicon-16x16.png',
-      type: 'image/png',
-      rel: 'icon',
-      sizes: '16x16',
-    },
-    ],
   }
 };
 
