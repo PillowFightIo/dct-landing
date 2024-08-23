@@ -70,7 +70,7 @@
 .descrow {
   text-align: center;
   display: flex;
-
+  justify-content: center;
 }
 
 .descrow img {
@@ -85,6 +85,7 @@
   border-radius: 35px;
   background: radial-gradient(circle, rgba(3,31,51,0.75) 0%, rgba(1,28,48,0.75) 100%);
   box-shadow: 0px 0px 28px 1px rgba(64,134,158,1);
+  min-width: 300px;
 }
 
 .screens {
@@ -104,6 +105,10 @@
   object-fit: contain;
 }
 
+.creditshead {
+  margin-bottom: 1rem;
+}
+
 .credits {
   display: grid;
   grid-template-columns: repeat(3, minmax(33%, auto));
@@ -114,15 +119,18 @@
 .creditspack {}
 
 .creditpack {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .credittitle {
-  font-style: italic;
-  font-size: 95%;
+  /*font-style: italic;*/
+  font-size: 85%;
+  font-family: var(--ptmono-family);
 }
 
-.credit {}
+.credit {
+  font-weight: bold;
+}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -148,6 +156,11 @@
   .hero {
     min-height: 200px;
     padding-left: 0.5rem;
+  }
+
+  .descrow {
+
+    flex-wrap: wrap-reverse;
   }
 
   .credits {
@@ -181,20 +194,5 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+  
 }

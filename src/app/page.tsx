@@ -22,6 +22,7 @@ export default function Home() {
       "--gridtile-url": `url(${gridtile.src})`,
       "--dragonmask-url": `url(${dragonmask.src})`,
       "--maincave-url": `url(${maincave.src})`,
+      "--ptmono-family": `${ptmono.style.fontFamily}`
     } as React.CSSProperties}>
       <div className={styles.hero}>
         <div className={styles.dragonlogo}>
@@ -86,8 +87,9 @@ export default function Home() {
               alt="An adult dragon says hello"
               fill />
           </div>
-
         </div>
+
+        <h2 className={styles.creditshead}>CREDITS</h2>
         
         <div className={styles.credits}>
           <div className={styles.creditspack}>
