@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, PT_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  themeColor: '#012b41',
+}
+
 export const metadata: Metadata = {
   title: "Dragon Care Tarot",
   description: "A cozy virtual pet game with divination. Brought to you by Pillow Fight.",
-  themeColor: '#012b41',
   icons: {
     icon: [
       {
