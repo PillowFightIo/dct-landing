@@ -1,0 +1,61 @@
+
+.card {
+
+  position: relative;
+  /* dummy working values */
+  width: 486px;
+  height: 838px;
+  border-radius: 25px;
+  backface-visibility: visible;
+  transform: rotateY(0deg);
+}
+
+.radius {
+  border-radius: 25px;
+}
+
+.inner {
+  backface-visibility: visible;
+  position: absolute;
+  border-radius: 25px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.inner::after {
+  backface-visibility: visible;
+  position: absolute;
+  content: '';
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border: 6px solid #FF42BC;
+  border-radius: 25px;
+  transform: translateZ(-10);
+}
+
+.innerborder {
+  backface-visibility: visible;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  border:5px solid #B6E1BC;
+  border-radius: 25px;
+}
+
+.back {
+  backface-visibility: hidden;
+
+}
+.face {
+  backface-visibility: hidden;
+}
+
+.unflipped {
+
+}
