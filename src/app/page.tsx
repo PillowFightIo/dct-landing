@@ -8,6 +8,7 @@ import tarotcards from '../../public/tarot_cards.gif';
 import dragonloop from '../../public/dragon-loop-wide.gif';
 import dragonsayshi from '../../public/dragon_says_hi.gif';
 import vitamin from '../../public/vitamin_animated.png';
+import RefreshableImage from './components/refreshableimage'
 import { PT_Mono } from "next/font/google";
 import { PointerEvent } from "react";
 
@@ -46,7 +47,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={`${styles.descrow} ${ptmono.className}`}>
-          <Image
+          <RefreshableImage
             className="hoverreplay"
             src={vitamin}
             alt="Vitamin, the human form moth simulacrum, says hello and is very happy with you"
