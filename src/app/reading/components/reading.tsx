@@ -10,18 +10,31 @@ const LAST_PULL_KEY = 'dct_last_pull_time';
 export const getRandomInt = (max:number) => Math.floor(Math.random() * max);
 export const getRandomEntry = (entries: any[]) => entries[getRandomInt(entries.length)];
 
+const getLocalStore = (key: string) => {
+    if(global?.window !== undefined) {
+        return localStorage.getItem(key);
+    }
+    return undefined;
+}
+
+const setLocalStore = (key: string, value: string) => {
+    if(global?.window !== undefined) {
+        localStorage.setItem(key, value);
+    }
+}
+
 const lastCard = () => {
-    const result = localStorage.getItem(LAST_CARD_KEY);
+    const result = getLocalStore(LAST_CARD_KEY);
     if(!result) {
         const newRes = getRandomEntry(suits.AllCards);
         // prime one...
-        localStorage.setItem(LAST_CARD_KEY, newRes);
+        setLocalStore(LAST_CARD_KEY, newRes);
         return newRes;
     }
     return result;
 }
 const lastPullTime = () => {
-    let val = localStorage.getItem(LAST_PULL_KEY);
+    let val = getLocalStore(LAST_PULL_KEY);
     if(val) {
         return new Date(parseInt(val));
     }
@@ -53,8 +66,8 @@ export default function Reading() {
     const handleCardClick = () => {
         if(!shown) {
             const newCard = getRandomEntry(suits.AllCards);
-            localStorage.setItem(LAST_CARD_KEY, newCard);
-            localStorage.setItem(LAST_PULL_KEY, ''+(new Date().getTime()))
+            setLocalStore(LAST_CARD_KEY, newCard);
+            setLocalStore(LAST_PULL_KEY, ''+(new Date().getTime()))
             setCard(newCard);
             setShown(true);
             setPullEligible(false);

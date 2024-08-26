@@ -1,4 +1,5 @@
-:root {
+
+.card {
   --card-height: 30.375rem;
   --card-aspect: 0.5799522673;
   --card-aspect-inv: 1.7242798354;
