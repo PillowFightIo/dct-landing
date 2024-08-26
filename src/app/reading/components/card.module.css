@@ -1,13 +1,12 @@
-
 .card {
-
   position: relative;
   /* dummy working values */
   width: 486px;
   height: 838px;
   border-radius: 25px;
   backface-visibility: visible;
-  transform: rotateY(0deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .radius {
@@ -22,6 +21,7 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
+  transform-style: preserve-3d;
 }
 
 .inner::after {
@@ -34,7 +34,7 @@
   bottom: 0px;
   border: 6px solid #FF42BC;
   border-radius: 25px;
-  transform: translateZ(-10);
+  
 }
 
 .innerborder {
@@ -48,14 +48,21 @@
   border-radius: 25px;
 }
 
-.back {
+.back, .face {
   backface-visibility: hidden;
-
+}
+.back img, .face img {
+  backface-visibility: hidden;
 }
 .face {
   backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .unflipped {
+  transform: rotateY(0);
+}
 
+.flipped {
+  transform: rotateY(180deg);
 }
