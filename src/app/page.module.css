@@ -18,7 +18,7 @@
 
 .hero {
   position: relative;
-  min-height: 400px;
+  min-height: 25rem;
   padding: 2em 0;
   width: 100vw;
 
@@ -80,12 +80,12 @@
 
 .description {
   margin: 2rem 0;
-  border: 5px solid #295B6B;
+  border: 0.313rem solid #295B6B;
   padding: 3rem 1.5rem;
-  border-radius: 35px;
+  border-radius: 2.188rem;
   background: radial-gradient(circle, rgba(3,31,51,0.75) 0%, rgba(1,28,48,0.75) 100%);
-  box-shadow: 0px 0px 28px 1px rgba(64,134,158,1);
-  min-width: 300px;
+  box-shadow: 0 0 1.75rem 0.063rem rgba(64,134,158,1);
+  min-width: 18.75rem;
   font-weight: normal;
 }
 
@@ -98,7 +98,7 @@
 
 .card {
   position: relative;
-  min-height: 300px;
+  min-height: 18.75rem;
   margin-bottom: 1rem;
 }
 
@@ -155,7 +155,7 @@
   }
 
   .hero {
-    min-height: 200px;
+    min-height: 12.5rem;
     padding-left: 0.5rem;
   }
 
@@ -166,8 +166,8 @@
 
   .credits {
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
+    margin-bottom: 7.5rem;
+    max-width: 20rem;
     text-align: center;
   }
 
@@ -185,7 +185,7 @@
 @media (min-width: 701px) and (max-width: 1120px) {
 
   .hero {
-    min-height: 300px;
+    min-height: 18.75rem;
   }
 
 
