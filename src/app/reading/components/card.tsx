@@ -1,26 +1,21 @@
 'use client'
 import Image, { getImageProps, ImageLoaderProps } from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as suits from '../lib/suits'
 import card_back_baked from '../../../../public/card-back-baked.png'
 import styles from "./card.module.css"
 
-export const getRandomInt = (max:number) => Math.floor(Math.random() * max);
-export const getRandomEntry = (entries: any[]) => entries[getRandomInt(entries.length)];
+interface CardProps {
+  shown: boolean;
+  card: string;
+  onClick: () => void;
+}
 
-
-export default function Card() {
-  const keys = Object.keys(suits.ImageMappings);
-  const [selected, setSelected] = useState("");
-  const [flipped, setFlipped] = useState(false);
-  if(!selected) {
-    setSelected(getRandomEntry(keys));
-  }
-
+export default function Card({shown, card, onClick}: CardProps) {
   return (
     <div 
-      className={[styles.card, flipped ? styles.flipped : styles.unflipped].join(' ')}
-      onClick={e => setFlipped(!flipped)}
+      className={[styles.card, shown ? styles.flipped : styles.unflipped].join(' ')}
+      onClick={e => {onClick && onClick()}}
     >
       <div className={styles.inner}>
         <Image
@@ -30,7 +25,7 @@ export default function Card() {
           alt=""/>
         <Image
           className={`${styles.radius} ${styles.face}`}
-          src={suits.ImageMappings[selected]}
+          src={card ? suits.ImageMappings[card] : ''}
           alt=""
           fill/>
       </div>

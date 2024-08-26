@@ -1,17 +1,17 @@
 import Image from "next/image";
+import Link from 'next/link'
 import * as suits from './lib/suits';
 import styles from "./page.module.css";
-import Card from './components/card';
+import Reading from './components/reading';
 
-export default function Reading() {
-
-
+export default function ReadingPage() {
     return (
-        <main className={styles.main}>
-            <Card>
-                
-            </Card>
-        </main>
+        <>
+            <header className={styles.head}><Link href='/'>← Back to Home</Link></header>
+            <main className={styles.main}>
+                <Reading/>
+            </main>
+        </>
     )
 }
 

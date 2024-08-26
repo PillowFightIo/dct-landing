@@ -1,22 +1,32 @@
+:root {
+  --card-height: 30.375rem;
+  --card-aspect: 0.5799522673;
+  --card-aspect-inv: 1.7242798354;
+
+  --card-width: calc(var(--card-height) * var(--card-aspect));
+  --card-border-radius: calc(var(--card-height) * 0.02984704108);
+  --card-border-outer-width: calc(var(--card-height) * 0.010); /* 0.375rem; */
+  --card-border-inner-width: calc(var(--card-height) * 0.0075); /* 0.313rem; */
+}
+
 .card {
   position: relative;
-  /* dummy working values */
-  width: 486px;
-  height: 838px;
-  border-radius: 25px;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--card-border-radius);
   backface-visibility: visible;
-  transition: transform 1s;
+  transition: transform 2s;
   transform-style: preserve-3d;
 }
 
 .radius {
-  border-radius: 25px;
+  border-radius: var(--card-border-radius);
 }
 
 .inner {
   backface-visibility: visible;
   position: absolute;
-  border-radius: 25px;
+  border-radius: var(--card-border-radius);
   left: 0px;
   right: 0px;
   top: 0px;
@@ -32,20 +42,20 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
-  border: 6px solid #FF42BC;
-  border-radius: 25px;
+  border: var(--card-border-outer-width) solid #FF42BC;
+  border-radius: var(--card-border-radius);
   
 }
 
 .innerborder {
   backface-visibility: visible;
   position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 20px;
-  bottom: 20px;
-  border:5px solid #B6E1BC;
-  border-radius: 25px;
+  left: 5%;
+  right: 5%;
+  top: 3%;
+  bottom: 3%;
+  border:var(--card-border-inner-width) solid #B6E1BC;
+  border-radius: var(--card-border-radius);
 }
 
 .back, .face {
