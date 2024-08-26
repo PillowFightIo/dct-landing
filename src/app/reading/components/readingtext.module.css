@@ -20,6 +20,10 @@
   transition: opacity 2s;
 }
 
+.cardname {
+  font-size: 120%;
+}
+
 .rb_contents {
   text-align: center;
   line-height: 1.4;

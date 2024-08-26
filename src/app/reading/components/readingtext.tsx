@@ -15,7 +15,8 @@ export default function ReadingText({shown, card}: CardProps) {
   return (
     <div className={[styles.readingbox, ptmono.className, shown ? styles.shown : ''].join(' ')}>
       <div className={styles.rb_contents}>
-        {suits.ReadingText[card]}
+        <div className={styles.cardname}>{suits.CardNames[card]}</div>
+        <div>{suits.ReadingText[card]}</div>
       </div>
     </div>
   );
