@@ -71,11 +71,13 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow: visible;
 }
 
-.descrow img {
-  flex-grow: 0;
-  flex-shrink: 0;
+.descrowimg {
+  flex: 0 0 320px;
 }
 
 .description {
@@ -85,8 +87,29 @@
   border-radius: 2.188rem;
   background: radial-gradient(circle, rgba(3,31,51,0.75) 0%, rgba(1,28,48,0.75) 100%);
   box-shadow: 0 0 1.75rem 0.063rem rgba(64,134,158,1);
-  min-width: 18.75rem;
   font-weight: normal;
+  flex: 1 1 18.75rem;
+}
+
+.buttons {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  overflow:visible;
+  margin-bottom: 0.34rem;
+}
+
+.button {
+  padding: 1rem 1.25rem;
+  background: #08A4BD;
+  border-radius: 15px;
+  text-shadow: 1px 1px 2px #000000;
+  box-shadow: 0 0 0.45rem 0.063rem rgba(64,134,158,1);
+}
+
+.readingbutton {
+  padding: 1rem 2.55rem;
 }
 
 .screens {
@@ -159,9 +182,14 @@
     padding-left: 0.5rem;
   }
 
-  .descrow {
+  .description { order: 1; }
 
-    flex-wrap: wrap-reverse;
+  .buttons { order: 2; }
+
+  .descrowimg { order: 3; }
+
+  .descrow {
+    flex-wrap: wrap;
   }
 
   .credits {
@@ -187,7 +215,6 @@
   .hero {
     min-height: 18.75rem;
   }
-
 
   .credits {
     grid-template-columns: repeat(2, 50%);

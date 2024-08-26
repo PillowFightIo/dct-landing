@@ -4,7 +4,6 @@ import Image, { ImageProps } from 'next/image'
 
 type ImageWithStateProps = ImageProps
 
-
 export default function RefreshableImage(props:ImageWithStateProps) {
     function redo(e: PointerEvent<HTMLSpanElement>) {
         let el = e.target as HTMLImageElement;
@@ -16,8 +15,9 @@ export default function RefreshableImage(props:ImageWithStateProps) {
         <span 
             onPointerEnter={redo}
             onPointerDown={redo}
+            className={props.className}
         >
-            <Image {...props}/>
+            <Image {...props} className=''/>
         </span>
     )
 }

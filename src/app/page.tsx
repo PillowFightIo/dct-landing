@@ -11,6 +11,7 @@ import vitamin from '../../public/vitamin_animated.png';
 import RefreshableImage from './components/refreshableimage'
 import { PT_Mono } from "next/font/google";
 import { PointerEvent } from "react";
+import Link from "next/link";
 
 const ptmono = PT_Mono({ 
   weight: ['400'],
@@ -48,7 +49,7 @@ export default function Home() {
       <div className={styles.content}>
         <div className={`${styles.descrow} ${ptmono.className}`}>
           <RefreshableImage
-            className="hoverreplay"
+            className={styles.descrowimg}
             src={vitamin}
             alt="Vitamin, the human form moth simulacrum, says hello and is very happy with you"
             height={vitamin.height/2}
@@ -58,6 +59,10 @@ export default function Home() {
             Dragon Care Tarot is a virtual pet simulator for dragon-lovers of all ages.<br/><br/>
             Pet, feed, and polish hand-animated dragons, fly over mysterious islands, and learn your future.
           </h2>
+          <div className={styles.buttons}>
+            <Link className={styles.button} href="https://store.steampowered.com/app/2655880">Wishlist on Steam</Link>
+            <Link className={`${styles.button} ${styles.readingbutton}`} href="/reading">Daily Reading</Link>
+          </div>
         </div>
         <div className={styles.screens}>
           <div
