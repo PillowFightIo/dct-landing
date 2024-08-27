@@ -9,6 +9,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://www.dragoncaretarot.com'),
   title: "Dragon Care Tarot",
   description: "A cozy virtual pet game with divination. Brought to you by Pillow Fight.",
   icons: {
