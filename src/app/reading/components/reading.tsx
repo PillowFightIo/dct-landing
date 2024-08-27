@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Card from './card'
 import ReadingText from './readingtext';
 import * as suits from '../lib/suits'
+import styles from "./reading.module.css";
 
 const LAST_CARD_KEY = 'dct_last_card';
 const LAST_PULL_KEY = 'dct_last_pull_time';
@@ -77,9 +78,9 @@ export default function Reading() {
     return (
         <>
             <Card card={card} shown={shown} onClick={handleCardClick}/>
-            {pullEligible && <div>Tap the card to reveal your fortune</div>}
+            {pullEligible && <div className={styles.cta}>Tap the card to reveal your fortune.</div>}
             <ReadingText shown={shown} card={card}/>
-            {!pullEligible && <div>Come back tomorrow for another read!</div>}
+            {!pullEligible && <div className={styles.cta}>Come back tomorrow for another reading!</div>}
         </>
     )
 }
