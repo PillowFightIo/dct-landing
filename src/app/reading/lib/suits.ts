@@ -87,7 +87,6 @@ export const AllCards = [
   'Cups_Ten',
   'Cups_Three',
   'Cups_Two',
-  /*
   'Majors_Chariot',
   'Majors_Death',
   'Majors_Devil',
@@ -110,7 +109,6 @@ export const AllCards = [
   'Majors_Tower',
   'Majors_Wheel',
   'Majors_World',
-  */
   'Swords_Ace',
   'Swords_Eight',
   'Swords_Five',
